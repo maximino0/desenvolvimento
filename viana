@@ -5,37 +5,49 @@ int main() {
  printf("\n Digite a quantidade de litros que você irá abastecer:\n");
     scanf("%f",&l);
     printf("digite o tipo de combustivel, A para alcool ou G para gasolina \n");
-    scanf("%c",&t);
-    -fpurge(stdin);
+    scanf(" %c",&t);
+    fflush(stdin);
     p=0;
     if(t=='a'||t=='A'){
         if(l<=25 && l>0){
-            p=(l*3,8);
-            p=p-(p*2/100) ;
+            p=l*38;
+            p=p/10;
+            d=p*2;
+            d=d/100;
+            p=p-d;
         }
         if(l>25){
-            p=l*3,8;
-            p=p-(p*4/100);
+           p=l*38;
+            p=p/10;
+            d=p*4;
+            d=d/100;
+            p=p-d;
         }
     }
     if(t=='g'||t=='G'){
         if(l<=25 && l>0){
-            p=(l*4,9);
-            p=p-(p*3/100);
+            p=l*49;
+            p=p/10;
+            d=p*3;
+            d=d/100;
+            p=p-d;
         }
         if(l>25){
-            p=l*4,9;
-            p=p-(p*5/100);
+            p=l*49;
+            p=p/10;
+            d=p*5;
+            d=d/100;
+            p=p-d;
         }
     }
-     if(t!='a'||t!='A'||t!='g'||t!='G'){
+    if(t!='a'||t!='A'||t!='g'||t!='G'){
             printf("Escolha de combustivel inválida");
             }
     if(l<=0){
         printf("você escolheu uma quantidade de combustivel inválida");
     }
     if(p!=0){
-        printf("O preço a pagar é %f",p);
+        printf("O preço a pagar é %.2f",p);
     }
 
 	return 0;
