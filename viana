@@ -1,0 +1,42 @@
+#include <stdio.h>
+float l, p, d;
+char t;
+int main() {
+ printf("\n Digite a quantidade de litros que você irá abastecer:\n");
+    scanf("%f",&l);
+    printf("digite o tipo de combustivel, A para alcool ou G para gasolina \n");
+    scanf("%c",&t);
+    -fpurge(stdin);
+    p=0;
+    if(t=='a'||t=='A'){
+        if(l<=25 && l>0){
+            p=(l*3,8);
+            p=p-(p*2/100) ;
+        }
+        if(l>25){
+            p=l*3,8;
+            p=p-(p*4/100);
+        }
+    }
+    if(t=='g'||t=='G'){
+        if(l<=25 && l>0){
+            p=(l*4,9);
+            p=p-(p*3/100);
+        }
+        if(l>25){
+            p=l*4,9;
+            p=p-(p*5/100);
+        }
+    }
+     if(t!='a'||t!='A'||t!='g'||t!='G'){
+            printf("Escolha de combustivel inválida");
+            }
+    if(l<=0){
+        printf("você escolheu uma quantidade de combustivel inválida");
+    }
+    if(p!=0){
+        printf("O preço a pagar é %f",p);
+    }
+
+	return 0;
+}
