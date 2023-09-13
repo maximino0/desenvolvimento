@@ -24,7 +24,7 @@ int main() {
             p=p-d;
         }
     }
-    if(t=='g'||t=='G'){
+    else if(t=='g'||t=='G'){
         if(l<=25 && l>0){
             p=l*49;
             p=p/10;
@@ -32,7 +32,7 @@ int main() {
             d=d/100;
             p=p-d;
         }
-        if(l>25){
+        else if(l>25){
             p=l*49;
             p=p/10;
             d=p*5;
@@ -40,7 +40,7 @@ int main() {
             p=p-d;
         }
     }
-    if(t!='a'||t!='A'||t!='g'||t!='G'){
+    else{
             printf("Escolha de combustivel inválida");
             }
     if(l<=0){
@@ -52,3 +52,4 @@ int main() {
 
 	return 0;
 }
+
